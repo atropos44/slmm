@@ -1,14 +1,11 @@
 import tkinter as tk
 import SlmmGui
-import logging, logging.config, configparser
+from SlmmUtils import getSlmmConfig, getSlmmLogger
 
 # Creates config object
-config = configparser.ConfigParser()
-config.read('config.ini')
-
+config = getSlmmConfig()
 # Creates logger object
-logging.config.fileConfig('logger.ini')
-logger = logging.getLogger('SlmmLogger')
+logger = getSlmmLogger()
 
 def main():
 
